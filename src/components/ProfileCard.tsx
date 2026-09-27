@@ -28,7 +28,7 @@ export default function ProfileCard({ name, role, avatarUrl, bio, skills }: Prof
 
 
         <div style={{ marginTop: '20px' }}>
-          <h4>My Skills</h4>
+          <h4>My Skills:</h4>
 
           {skills.length === 0 ? (
             <p>No skills added yet.</p>
