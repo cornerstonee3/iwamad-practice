@@ -46,7 +46,7 @@ main {
 
 .card p {
   line-height: 1.5;
-  color: #4b5563;
+  color: #f70000;
 }
 
 .links {
@@ -67,4 +67,9 @@ main {
 .card.liked {
   background-color: #f0fdf4; 
   border-color: #22c55e;     
+}
+.active {
+  font-weight: bold;
+  color: #2563eb;
+  text-decoration: underline;
 }
