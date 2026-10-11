@@ -1,5 +1,5 @@
 import LikeButton from './LikeButton';
-
+import { Card } from './ui/Card';
 type ProfileCardProps = {
   name: string;
   role: string;
@@ -9,10 +9,9 @@ type ProfileCardProps = {
 };
 
 export default function ProfileCard({ name, role, avatarUrl, bio }: ProfileCardProps) {
-
   return (
     <main>
-      <section className="profile-card">
+      <Card>
         {avatarUrl && (
           <img src={avatarUrl} alt={`Profile picture of ${name}`} width="300" />
         )}
@@ -21,7 +20,7 @@ export default function ProfileCard({ name, role, avatarUrl, bio }: ProfileCardP
         <p>{bio}</p>
 
         <LikeButton />
-      </section>
+      </Card>
     </main>
   );
 }
