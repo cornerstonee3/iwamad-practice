@@ -1,16 +1,14 @@
-import { useState } from 'react';
-import SkillBadge, { type Skill } from './SkillBadge';
+import LikeButton from './LikeButton';
 
 type ProfileCardProps = {
   name: string;
   role: string;
   avatarUrl?: string;
   bio: string;
-  skills: Skill[];
+  skills?: string[];
 };
 
-export default function ProfileCard({ name, role, avatarUrl, bio, skills }: ProfileCardProps) {
-  const [isLiked, setIsLiked] = useState(false);
+export default function ProfileCard({ name, role, avatarUrl, bio }: ProfileCardProps) {
 
   return (
     <main>
@@ -22,24 +20,7 @@ export default function ProfileCard({ name, role, avatarUrl, bio, skills }: Prof
         <h3>{role}</h3>
         <p>{bio}</p>
 
-        <button onClick={() => setIsLiked(!isLiked)}>
-          {isLiked ? '❤️ Liked' : '🤍 Like'}
-        </button>
-
-
-        <div style={{ marginTop: '20px' }}>
-          <h4>My Skills:</h4>
-
-          {skills.length === 0 ? (
-            <p>No skills added yet.</p>
-          ) : (
-            <ul>
-              {skills.map(skill => (
-                <SkillBadge key={skill.id} skill={skill} />
-              ))}
-            </ul>
-          )}
-        </div>
+        <LikeButton />
       </section>
     </main>
   );
