@@ -28,6 +28,7 @@ export default function Header({ name, tagline }: HeaderProps) {
         <NavLink to="/skills" className={({ isActive }) => isActive ? "active" : ""}>Skills</NavLink>
         <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>Contacts</NavLink>
         <NavLink to="/register" className={({ isActive }) => isActive ? "active" : ""}>Register</NavLink>
+        <NavLink to="/events" className={({ isActive })=>isActive ? "active" : ""}>Events</NavLink>
       </nav>
     </header>
   );
